@@ -3,16 +3,20 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
-
+.navbar-full{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
 
 /*--------Header---------*/
 
 #header {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(img/background.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    width: auto;
 }
 
 .user-box {
@@ -36,7 +40,6 @@ body {
 }
 
 .scroll-btn {
-    bottom: 30px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -55,6 +58,25 @@ body {
     animation: mover 1s infinite alternate;
 }
 
+#profilepic{
+    margin-top: 20vh;
+    border-radius: 50%;
+    width:300px;
+    height:300px;
+    
+}
+@media(max-width:720px){
+    #profilepic{
+    width:50%;
+    height:auto;    
+    }
+}
+h1{
+    color: white;
+}
+#role{
+    color: white;
+}
 @keyframes mover {
     0% {
         transform: translateY(0);
@@ -74,7 +96,7 @@ body {
 
 .nav-bar {
     top: 0;
-    position: sticky;
+    position: fixed;
     z-index: 2;
 }
 
